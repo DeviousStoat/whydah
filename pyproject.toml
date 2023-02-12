@@ -39,6 +39,9 @@ check_fmt = [{ cmd = "black --check ." }, { cmd = "isort --check ." }]
 test = "pytest -vv"
 check = ["lint", "check_fmt", "check_type", "test"]
 
+[tool.poetry.scripts]
+whydah = "whydah.main:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
